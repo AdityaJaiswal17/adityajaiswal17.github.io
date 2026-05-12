@@ -1,9 +1,11 @@
+import { asset } from '../utils/asset'
+
 export const education = [
   {
     degree: 'MSc Applied Computational Science & Engineering',
     institution: 'Imperial College London',
     institutionUrl: 'https://www.imperial.ac.uk',
-    logo: '/images/logos/imperial.png',
+    logo: asset('/images/logos/imperial.png'),
     period: '2026 – 2027',
     location: 'London, United Kingdom',
     upcoming: false,
@@ -16,7 +18,7 @@ export const education = [
     degree: 'B.E. (Hons.) Mechanical Engineering',
     institution: 'Birla Institute of Technology and Science (BITS) Pilani, Pilani Campus',
     institutionUrl: 'https://www.bits-pilani.ac.in/pilani/mechanical-engineering/',
-    logo: '/images/logos/bits.png',
+    logo: asset('/images/logos/bits.png'),
     period: '2021 – 2025',
     location: 'Pilani, Rajasthan, India',
     upcoming: false,
@@ -39,7 +41,7 @@ export const experience = [
     role: 'R&D Sourcing',
     company: 'ideaForge',
     companyUrl: 'https://www.ideaforge.co.in/',
-    logo: '/images/logos/ideaforge.png',
+    logo: asset('/images/logos/ideaforge.png'),
     period: 'Oct 2025 – Present',
     location: 'India',
     current: true,
@@ -53,7 +55,7 @@ export const experience = [
     role: 'Undergraduate Thesis — Computational AeroSciences Lab',
     company: 'Indian Institute of Science (IISc)',
     companyUrl: 'https://aero.iisc.ac.in/',
-    logo: '/images/logos/iisc.png',
+    logo: asset('/images/logos/iisc.png'),
     logoInvert: true,
     advisor: 'Dr. Aravind Balan',
     period: 'Aug 2024 – Jan 2025',
@@ -70,7 +72,7 @@ export const experience = [
     role: 'Summer Intern — UR Rao Satellite Centre',
     company: 'Indian Space Research Organization (ISRO)',
     companyUrl: 'https://www.ursc.gov.in/',
-    logo: '/images/logos/isro.png',
+    logo: asset('/images/logos/isro.png'),
     period: 'May 2024 – Jul 2024',
     location: 'Bangalore, India',
     current: false,
@@ -84,7 +86,7 @@ export const experience = [
     role: 'Research Intern',
     company: 'Indian Institute of Technology Bombay (IIT Bombay)',
     companyUrl: 'https://www.che.iitb.ac.in/',
-    logo: '/images/logos/iitb.png',
+    logo: asset('/images/logos/iitb.png'),
     advisor: 'Dr. Amol Subhedar',
     period: 'May 2023 – Aug 2023',
     location: 'Mumbai, India',
@@ -109,8 +111,8 @@ export const siteConfig = {
   email: 'adi1709.jaiswal@gmail.com',
   github: 'https://github.com/AdityaJaiswal17',
   linkedin: 'https://www.linkedin.com/in/aditya-jaiswal-bits',
-  cvUrl: '/files/Aditya_Jaiswal_MS_CV.pdf',
-  profilePic: '/images/self_upload/profile_pic.JPG',
+  cvUrl: asset('/files/Aditya_Jaiswal_MS_CV.pdf'),
+  profilePic: asset('/images/self_upload/profile_pic.JPG'),
 }
 
 export const aboutText = [
@@ -131,8 +133,8 @@ export const researchHighlights = [
     venue: 'Presented at COMPFLU 2023',
     tags: ['LBM', 'Multiphase Flow', 'Allen-Cahn', 'C++'],
     images: [
-      { src: '/images/self_upload/Phase_field_ST_0.0001.png', caption: 'Phase field contours for a bubble suspended in a symmetrical system.' },
-      { src: '/images/self_upload/ST_0.0001.png', caption: 'Spurious currents induced due to errors in surface tension forcing scheme.' },
+      { src: asset('/images/self_upload/Phase_field_ST_0.0001.png'), caption: 'Phase field contours for a bubble suspended in a symmetrical system.' },
+      { src: asset('/images/self_upload/ST_0.0001.png'), caption: 'Spurious currents induced due to errors in surface tension forcing scheme.' },
     ],
     link: 'https://ge.iitm.ac.in/compflu-2023/wp-content/uploads/2023/12/Abstract%20booklet%20COMPFLU%20v10.pdf#page=355',
   },
@@ -157,8 +159,8 @@ export const fdmProjects = [
     tags: ['FDM', 'Heat Transfer', 'OpenMP', 'C++'],
     github: 'https://github.com/AdityaJaiswal17/Finite_Difference_Methods/blob/main/1D_HeatDiffusion_FDM%20/1D_Heat_Diff.cpp',
     images: [
-      { src: '/images/self_upload/fdm/1D_heat_diffusion_1.png', caption: 'Temperature profile: BCs at 100.0 and 1000.0.' },
-      { src: '/images/self_upload/fdm/1D_heat_diffusion_2.png', caption: 'Temperature profile: BCs at 100.0 and 100.0.' },
+      { src: asset('/images/self_upload/fdm/1D_heat_diffusion_1.png'), caption: 'Temperature profile: BCs at 100.0 and 1000.0.' },
+      { src: asset('/images/self_upload/fdm/1D_heat_diffusion_2.png'), caption: 'Temperature profile: BCs at 100.0 and 100.0.' },
     ],
     method: 'fdm' as const,
     fullContent: {
@@ -185,8 +187,8 @@ After execution, the solver generates an \`output.dat\` file. Boundary condition
     tags: ['FDM', 'Heat Transfer', '2D', 'OpenMP', 'C++'],
     github: 'https://github.com/AdityaJaiswal17/Finite_Difference_Methods/blob/main/2D_HeatDiffusion_FDM/2D_heat_diff.cpp',
     images: [
-      { src: '/images/self_upload/fdm/2D_heat_diffusion_1.png', caption: 'Temperature contour from our solver.' },
-      { src: '/images/self_upload/fdm/2D_heat_diffusion_2.jpg', caption: 'Reference contour for validation.' },
+      { src: asset('/images/self_upload/fdm/2D_heat_diffusion_1.png'), caption: 'Temperature contour from our solver.' },
+      { src: asset('/images/self_upload/fdm/2D_heat_diffusion_2.jpg'), caption: 'Reference contour for validation.' },
     ],
     method: 'fdm' as const,
     fullContent: {
@@ -232,12 +234,12 @@ splot 'output_serial.dat' using 1:2:3 with image
     tags: ['FDM', 'Navier-Stokes', 'Cavity Flow', 'OpenMP', 'C++'],
     github: 'https://github.com/AdityaJaiswal17/Finite_Difference_Methods/tree/main/Lid_Driven_Cavity',
     images: [
-      { src: '/images/self_upload/fdm/peclet_num.jpg', caption: 'Central differencing scheme vs Upwind scheme for Pe > 2.' },
-      { src: '/images/self_upload/fdm/validation_ux.png', caption: 'U velocity at x=0.5 vs Ghia et al. (Re=100).' },
-      { src: '/images/self_upload/fdm/validation_vy.png', caption: 'V velocity at y=0.5 vs Ghia et al. (Re=100).' },
-      { src: '/images/self_upload/fdm/lid_driven_fdm_re50.png', caption: 'Velocity contours at Re = 50.' },
-      { src: '/images/self_upload/fdm/lid_driven_fdm_re100.png', caption: 'Velocity contours at Re = 100.' },
-      { src: '/images/self_upload/fdm/lid_driven_fdm_re200.png', caption: 'Velocity contours at Re = 200.' },
+      { src: asset('/images/self_upload/fdm/peclet_num.jpg'), caption: 'Central differencing scheme vs Upwind scheme for Pe > 2.' },
+      { src: asset('/images/self_upload/fdm/validation_ux.png'), caption: 'U velocity at x=0.5 vs Ghia et al. (Re=100).' },
+      { src: asset('/images/self_upload/fdm/validation_vy.png'), caption: 'V velocity at y=0.5 vs Ghia et al. (Re=100).' },
+      { src: asset('/images/self_upload/fdm/lid_driven_fdm_re50.png'), caption: 'Velocity contours at Re = 50.' },
+      { src: asset('/images/self_upload/fdm/lid_driven_fdm_re100.png'), caption: 'Velocity contours at Re = 100.' },
+      { src: asset('/images/self_upload/fdm/lid_driven_fdm_re200.png'), caption: 'Velocity contours at Re = 200.' },
     ],
     method: 'fdm' as const,
     fullContent: {
@@ -295,8 +297,8 @@ export const lbmProjects = [
     tags: ['LBM', 'D2Q9', 'BGK', 'C++', 'Couette Flow'],
     github: 'https://github.com/AdityaJaiswal17/Lattice_Boltzmann_Method/blob/main/CouetteFlow/CouetteFlow.cpp',
     images: [
-      { src: '/images/self_upload/lbm/couette_ani.gif', caption: 'Couette flow velocity field animation.' },
-      { src: '/images/self_upload/lbm/Validation_Couette.png', caption: 'Computed vs analytical solution.' },
+      { src: asset('/images/self_upload/lbm/couette_ani.gif'), caption: 'Couette flow velocity field animation.' },
+      { src: asset('/images/self_upload/lbm/Validation_Couette.png'), caption: 'Computed vs analytical solution.' },
     ],
     method: 'lbm' as const,
     fullContent: {
@@ -344,12 +346,12 @@ The simulation runs for a user-controlled number of iterations (\`last_itr\`) an
     tags: ['LBM', 'D2Q9', 'BGK', 'Guo Forcing', 'C++'],
     github: 'https://github.com/AdityaJaiswal17/Lattice_Boltzmann_Method/tree/main/PoisuelleFlow',
     images: [
-      { src: '/images/self_upload/lbm/gravity_driven.gif', caption: 'Gravity-driven Poiseuille flow animation.' },
-      { src: '/images/self_upload/lbm/gravity_driven_U_profile.png', caption: 'Gravity-driven velocity profile (parabolic).' },
-      { src: '/images/self_upload/lbm/pressure_driven.gif', caption: 'Pressure-driven Poiseuille flow animation.' },
-      { src: '/images/self_upload/lbm/pressure_driven_U_profile.png', caption: 'Pressure-driven velocity profile (parabolic).' },
-      { src: '/images/self_upload/lbm/validation_poisuelleGrav.png', caption: 'Gravity-driven: computed vs analytical.' },
-      { src: '/images/self_upload/lbm/validation_poisuelleFlow.png', caption: 'Pressure-driven: computed vs analytical.' },
+      { src: asset('/images/self_upload/lbm/gravity_driven.gif'), caption: 'Gravity-driven Poiseuille flow animation.' },
+      { src: asset('/images/self_upload/lbm/gravity_driven_U_profile.png'), caption: 'Gravity-driven velocity profile (parabolic).' },
+      { src: asset('/images/self_upload/lbm/pressure_driven.gif'), caption: 'Pressure-driven Poiseuille flow animation.' },
+      { src: asset('/images/self_upload/lbm/pressure_driven_U_profile.png'), caption: 'Pressure-driven velocity profile (parabolic).' },
+      { src: asset('/images/self_upload/lbm/validation_poisuelleGrav.png'), caption: 'Gravity-driven: computed vs analytical.' },
+      { src: asset('/images/self_upload/lbm/validation_poisuelleFlow.png'), caption: 'Pressure-driven: computed vs analytical.' },
     ],
     method: 'lbm' as const,
     fullContent: {
@@ -411,8 +413,8 @@ Analytical solution: $u(y) = \\frac{1}{2\\mu}\\frac{\\Delta P}{L} y(H-y), \\quad
     tags: ['LBM', 'D1Q3', 'BGK', 'Heat Transfer', 'OpenMP', 'C++'],
     github: 'https://github.com/AdityaJaiswal17/Lattice_Boltzmann_Method/blob/main/1D_HeadConduction_LBM/1D_heat_diff.cpp',
     images: [
-      { src: '/images/self_upload/lbm/1d_heat_lbm.gif', caption: '1D heat diffusion animation (transient evolution).' },
-      { src: '/images/self_upload/lbm/heat_1d_lbm.png', caption: 'Steady-state temperature profile matches analytical solution.' },
+      { src: asset('/images/self_upload/lbm/1d_heat_lbm.gif'), caption: '1D heat diffusion animation (transient evolution).' },
+      { src: asset('/images/self_upload/lbm/heat_1d_lbm.png'), caption: 'Steady-state temperature profile matches analytical solution.' },
     ],
     method: 'lbm' as const,
     fullContent: {
@@ -458,10 +460,10 @@ Since LBM inherently models **time evolution**, the solver is **transient** — 
     tags: ['LBM', 'D2Q9', 'BGK', 'Cavity Flow', 'C++'],
     github: 'https://github.com/AdityaJaiswal17/Lattice_Boltzmann_Method/blob/main/Lid_Driven_Cavity/cavity.cpp',
     images: [
-      { src: '/images/self_upload/lbm/Re_100_lowres.gif', caption: 'Velocity field animation at Re = 100.' },
-      { src: '/images/self_upload/lbm/Re_500_lowres.gif', caption: 'Velocity field animation at Re = 500.' },
-      { src: '/images/self_upload/lbm/validation_UY.png', caption: 'U velocity at x=0.5 vs Ghia et al.' },
-      { src: '/images/self_upload/lbm/validation_XV.png', caption: 'V velocity at y=0.5 vs Ghia et al.' },
+      { src: asset('/images/self_upload/lbm/Re_100_lowres.gif'), caption: 'Velocity field animation at Re = 100.' },
+      { src: asset('/images/self_upload/lbm/Re_500_lowres.gif'), caption: 'Velocity field animation at Re = 500.' },
+      { src: asset('/images/self_upload/lbm/validation_UY.png'), caption: 'U velocity at x=0.5 vs Ghia et al.' },
+      { src: asset('/images/self_upload/lbm/validation_XV.png'), caption: 'V velocity at y=0.5 vs Ghia et al.' },
     ],
     method: 'lbm' as const,
     fullContent: {
@@ -514,7 +516,7 @@ At Re = 100, the primary vortex forms at the cavity center. At Re = 500, stronge
     tags: ['LBM', 'D2Q9', 'BGK', 'Vortex Shedding', 'OpenMP', 'C++'],
     github: 'https://github.com/AdityaJaiswal17/Lattice_Boltzmann_Method/blob/main/Flow_past_cylinder/flow_past_cylinder.cpp',
     images: [
-      { src: '/images/self_upload/flowPastCylinder.gif', caption: 'Flow past cylinder at Re = 100 — von Kármán vortex street.' },
+      { src: asset('/images/self_upload/flowPastCylinder.gif'), caption: 'Flow past cylinder at Re = 100 — von Kármán vortex street.' },
     ],
     method: 'lbm' as const,
     fullContent: {

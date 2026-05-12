@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Github, Linkedin, Mail, FileText, ArrowRight, MapPin } from 'lucide-react'
 import { siteConfig, aboutText, fdmProjects, lbmProjects } from '../data/content'
+import { asset } from '../utils/asset'
 import ExperienceTimeline from '../components/ExperienceTimeline'
 import EducationSection from '../components/EducationSection'
 
@@ -111,14 +112,14 @@ export default function HomePage() {
               <div className="grid grid-cols-2 gap-3">
                 <figure className="rounded-xl overflow-hidden border border-slate-700/50">
                   <img
-                    src="/images/self_upload/Phase_field_ST_0.0001.png"
+                    src={asset('/images/self_upload/Phase_field_ST_0.0001.png')}
                     alt="Phase field simulation — IIT Bombay"
                     className="w-full h-auto object-contain"
                   />
                 </figure>
                 <figure className="rounded-xl overflow-hidden border border-slate-700/50">
                   <img
-                    src="/images/self_upload/ST_0.0001.png"
+                    src={asset('/images/self_upload/ST_0.0001.png')}
                     alt="Surface tension forcing — IIT Bombay"
                     className="w-full h-auto object-contain"
                   />
@@ -148,7 +149,7 @@ export default function HomePage() {
               {/* Flow past cylinder GIF */}
               <div className="mt-4 rounded-xl overflow-hidden border border-slate-700/50">
                 <img
-                  src="/images/self_upload/flowPastCylinder.gif"
+                  src={asset('/images/self_upload/flowPastCylinder.gif')}
                   alt="Flow past cylinder — Lattice Boltzmann Method"
                   className="w-full"
                 />

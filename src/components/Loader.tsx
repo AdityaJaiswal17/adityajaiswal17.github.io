@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { asset } from '../utils/asset'
 
 export default function Loader() {
   const [phase, setPhase] = useState<'in' | 'hold' | 'out' | 'done'>('in')
@@ -23,7 +24,7 @@ export default function Loader() {
       {/* Vortex GIF — bright fill */}
       <div className="absolute inset-0">
         <img
-          src="/images/loader.gif"
+          src={asset('/images/loader.gif')}
           alt=""
           className="w-full h-full object-cover"
           style={{ opacity: 0.95 }}

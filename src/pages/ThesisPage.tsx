@@ -1,38 +1,39 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft, Github, FileText, ChevronRight, ExternalLink } from 'lucide-react'
+import { asset } from '../utils/asset'
 
 const meshPairs = [
   {
     label: 'Quarter Circle',
-    tri: { src: '/images/self_upload/thesis/cross_tri.png', alt: 'Quarter circle: initial tri mesh' },
-    quad: { src: '/images/self_upload/thesis/cross_recombined.png', alt: 'Quarter circle: recombined quad mesh' },
+    tri: { src: asset('/images/self_upload/thesis/cross_tri.png'), alt: 'Quarter circle: initial tri mesh' },
+    quad: { src: asset('/images/self_upload/thesis/cross_recombined.png'), alt: 'Quarter circle: recombined quad mesh' },
   },
   {
     label: 'Diamond Airfoil (Full View)',
-    tri: { src: '/images/self_upload/thesis/airofil_tri.png', alt: 'Diamond airfoil (full): initial tri mesh' },
-    quad: { src: '/images/self_upload/thesis/airfoil_recombined.png', alt: 'Diamond airfoil (full): recombined quad mesh' },
+    tri: { src: asset('/images/self_upload/thesis/airofil_tri.png'), alt: 'Diamond airfoil (full): initial tri mesh' },
+    quad: { src: asset('/images/self_upload/thesis/airfoil_recombined.png'), alt: 'Diamond airfoil (full): recombined quad mesh' },
   },
   {
     label: 'Diamond Airfoil (Zoomed In)',
-    tri: { src: '/images/self_upload/thesis/airfoil_tri_zoomedOut.png', alt: 'Diamond airfoil (zoomed): initial tri mesh' },
-    quad: { src: '/images/self_upload/thesis/airfoil_recombined_zoomed.png', alt: 'Diamond airfoil (zoomed): recombined quad mesh' },
+    tri: { src: asset('/images/self_upload/thesis/airfoil_tri_zoomedOut.png'), alt: 'Diamond airfoil (zoomed): initial tri mesh' },
+    quad: { src: asset('/images/self_upload/thesis/airfoil_recombined_zoomed.png'), alt: 'Diamond airfoil (zoomed): recombined quad mesh' },
   },
   {
     label: 'Configuration 1',
-    tri: { src: '/images/self_upload/thesis/config1_tri.png', alt: 'Config 1: initial tri mesh' },
-    quad: { src: '/images/self_upload/thesis/config1_recombined.png', alt: 'Config 1: recombined quad mesh' },
+    tri: { src: asset('/images/self_upload/thesis/config1_tri.png'), alt: 'Config 1: initial tri mesh' },
+    quad: { src: asset('/images/self_upload/thesis/config1_recombined.png'), alt: 'Config 1: recombined quad mesh' },
   },
   {
     label: 'Configuration 2',
-    tri: { src: '/images/self_upload/thesis/config2_tri.png', alt: 'Config 2: initial tri mesh' },
-    quad: { src: '/images/self_upload/thesis/config2_recombined.png', alt: 'Config 2: recombined quad mesh' },
-    quadZoomed: { src: '/images/self_upload/thesis/config2_recombined_zoomed.png', alt: 'Config 2 zoomed: recombined quad mesh' },
+    tri: { src: asset('/images/self_upload/thesis/config2_tri.png'), alt: 'Config 2: initial tri mesh' },
+    quad: { src: asset('/images/self_upload/thesis/config2_recombined.png'), alt: 'Config 2: recombined quad mesh' },
+    quadZoomed: { src: asset('/images/self_upload/thesis/config2_recombined_zoomed.png'), alt: 'Config 2 zoomed: recombined quad mesh' },
   },
   {
     label: 'Quarter Circle (Zoomed)',
-    tri: { src: '/images/self_upload/thesis/quarter_tri.png', alt: 'Quarter (zoomed): initial tri mesh' },
-    quad: { src: '/images/self_upload/thesis/quarter_recombine.png', alt: 'Quarter (zoomed): recombined quad mesh' },
-    quadZoomed: { src: '/images/self_upload/thesis/quarter_recombine_zoomed.png', alt: 'Quarter (zoomed detail): recombined mesh' },
+    tri: { src: asset('/images/self_upload/thesis/quarter_tri.png'), alt: 'Quarter (zoomed): initial tri mesh' },
+    quad: { src: asset('/images/self_upload/thesis/quarter_recombine.png'), alt: 'Quarter (zoomed): recombined quad mesh' },
+    quadZoomed: { src: asset('/images/self_upload/thesis/quarter_recombine_zoomed.png'), alt: 'Quarter (zoomed detail): recombined mesh' },
   },
 ]
 
@@ -79,7 +80,7 @@ export default function ThesisPage() {
               <Github size={15} /> GitHub Repository
             </a>
             <a
-              href="/files/Aditya_Jaiswal_Thesis.pdf"
+              href={asset('/files/Aditya_Jaiswal_Thesis.pdf')}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
@@ -174,12 +175,12 @@ export default function ThesisPage() {
             {/* Notation figures */}
             <div className="grid sm:grid-cols-2 gap-4 mt-6">
               <MeshFigure
-                src="/images/self_upload/thesis/notations.jpg"
+                src={asset('/images/self_upload/thesis/notations.jpg')}
                 alt="Triangle notation"
                 label="Triangle notation for identifying vertex and edges."
               />
               <MeshFigure
-                src="/images/self_upload/thesis/opp_neighbor_notation.jpg"
+                src={asset('/images/self_upload/thesis/opp_neighbor_notation.jpg')}
                 alt="Neighbor notation"
                 label="Notation for identifying neighboring triangle."
               />
@@ -188,12 +189,12 @@ export default function ThesisPage() {
             {/* Flowcharts */}
             <div className="grid sm:grid-cols-2 gap-4 mt-4">
               <MeshFigure
-                src="/images/self_upload/thesis/AR_algoFlowchart.png"
+                src={asset('/images/self_upload/thesis/AR_algoFlowchart.png')}
                 alt="AR algorithm flowchart"
                 label="Algorithm to compute aspect ratios."
               />
               <MeshFigure
-                src="/images/self_upload/thesis/program_flowchart.png"
+                src={asset('/images/self_upload/thesis/program_flowchart.png')}
                 alt="Program flowchart"
                 label="Program's algorithm overview."
               />
@@ -331,7 +332,7 @@ const pipelineSteps = [
     step: 1,
     title: 'Input',
     description: 'Reads a Netgen/NGSolve .vol file containing a triangular mesh adapted in metric space.',
-    image: { src: '/images/self_upload/thesis/meshInput.png', alt: 'Mesh input block from the code', caption: 'Mesh input block (snippet taken from the code).' },
+    image: { src: asset('/images/self_upload/thesis/meshInput.png'), alt: 'Mesh input block from the code', caption: 'Mesh input block (snippet taken from the code).' },
   },
   {
     step: 2,
