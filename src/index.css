@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-navy-950 text-slate-200 font-sans antialiased;
+    background-image: linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+    background-size: 60px 60px;
+    background-attachment: fixed;
+  }
+
+  * {
+    @apply border-white/10;
+  }
+
+  ::selection {
+    @apply bg-white/20 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-white/20 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-white/40;
+  }
+}
+
+@layer components {
+  .section-heading {
+    @apply text-3xl font-bold text-white mb-2;
+  }
+
+  .section-subheading {
+    @apply text-slate-400 text-base mb-10;
+  }
+
+  .card {
+    @apply bg-navy-800 border border-white/10 rounded-xl
+      transition-all duration-300 hover:border-white/25 hover:shadow-lg hover:shadow-black/60;
+  }
+
+  .tag {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
+      bg-white/10 text-white border border-white/20;
+  }
+
+  .tag-gray {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
+      bg-white/5 text-slate-300 border border-white/10;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold
+      bg-white text-black hover:bg-slate-200 transition-all duration-200
+      shadow-lg shadow-black/40;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold
+      border border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-200;
+  }
+
+  .nav-link {
+    @apply text-slate-400 hover:text-white transition-colors duration-200 text-sm font-medium
+      relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px
+      after:bg-white after:transition-all after:duration-300 hover:after:w-full;
+  }
+
+  .nav-link-active {
+    @apply text-white after:w-full;
+  }
+
+  .section-divider {
+    @apply w-12 h-px bg-white/40 mb-6;
+  }
+
+  .prose-dark {
+    @apply text-slate-300 leading-relaxed;
+  }
+
+  .prose-dark strong {
+    @apply text-white font-semibold;
+  }
+
+  .prose-dark a {
+    @apply text-white hover:text-slate-300 underline underline-offset-2;
+  }
+
+  .prose-dark code {
+    @apply font-mono text-sm bg-white/10 text-white px-1.5 py-0.5 rounded;
+  }
+
+  .method-badge {
+    @apply font-mono text-xs tracking-wider uppercase px-3 py-1 rounded-md
+      bg-white/10 text-white border border-white/20;
+  }
+}
+
+/* KaTeX math rendering */
+.katex-display {
+  @apply overflow-x-auto py-3;
+}
+
+.katex {
+  font-size: 1.05em;
+}
+
+/* Syntax highlight code blocks */
+pre {
+  @apply rounded-lg overflow-x-auto text-sm my-4;
+  scrollbar-width: thin;
+}
+
+/* Fade-in animation for page transitions */
+.page-enter {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Figure captions */
+figcaption {
+  @apply text-slate-400 text-sm text-center mt-2 italic;
+}
