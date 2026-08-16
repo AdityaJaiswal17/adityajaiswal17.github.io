@@ -358,4 +358,4 @@ Routes are defined in `src/App.tsx`. To add a new page:
 | remark-math | Parses `$...$` / `$$...$$` in markdown |
 | rehype-katex | Renders KaTeX from remark-math AST |
 | react-syntax-highlighter | Code block syntax highlighting |
-| lucide-react | Icon library |
+| lucide-react | Icon library |.
