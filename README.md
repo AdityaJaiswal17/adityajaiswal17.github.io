@@ -1,4 +1,4 @@
-Visit here: https://adityajaiswal17.github.io/aditya_jaiswal/
+Visit here: https://adityajaiswal17.github.io/
 
 # Aditya Jaiswal — Portfolio Website
 
