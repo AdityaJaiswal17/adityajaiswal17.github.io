@@ -33,12 +33,12 @@ export default function HomePage() {
               </h1>
 
               <p className="text-slate-300 text-lg leading-relaxed max-w-xl">
-                Mechanical Engineer specializing in{' '}
-                <span className="text-white font-medium">Computational Fluid Dynamics</span>,{' '}
-                <span className="text-white font-medium">Numerical Methods</span>, and{' '}
-                <span className="text-white font-medium">High-Performance Computing</span>.
+                I like doing math and turning it into things that{' '}
+                <span className="text-white font-medium">move</span>,{' '}
+                <span className="text-white font-medium">fly</span>, or{' '}
+                <span className="text-white font-medium">make sense</span>.
               </p>
-
+              
               <div className="flex flex-wrap items-center gap-2 text-sm text-slate-400">
                 <span className="flex items-center gap-1.5">
                   <MapPin size={13} className="text-accent" />
